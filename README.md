@@ -70,22 +70,33 @@ Use compact mode and description truncation to feed data into AI agents, MCP ser
 
 ## FAQ
 
-<!-- WRITE: 4-6 Q&A pairs relevant to this product -->
+**How many results can I get?**
+The number depends on your search query and available listings. Use `maxResults` to control output size — set to `0` for unlimited.
+
+**What data fields are included?**
+32 fields per listing: title, company, location, employment type, workload percentage, description, apply URL, publication dates, skills, language requirements, categories, and more.
 
 **Is it legal to scrape jobs.ch?**
-Web scraping of publicly available data is generally legal. This actor only accesses publicly visible information. Always check the target site's terms of service for your specific use case.
+This actor only accesses publicly visible information. Web scraping of public data is generally legal, but always check the target site's terms of service for your specific use case.
 
 **How does incremental mode work?**
 Each listing gets a content hash. On subsequent runs, only new or changed listings are emitted — saving time, compute, and storage.
+
+**Can I filter by employment type?**
+Yes. Use the `employmentType` parameter to filter by Permanent, Temporary, Freelance, Internship, Apprenticeship, or Supplementary income.
+
+**How much does it cost?**
+Pay-per-event: $0.01 per run start + $0.002 per result. Incremental runs only charge for new/changed results.
 
 ---
 
 ## Known limitations
 
-<!-- WRITE: 4-6 honest limitations -->
-
-- <!-- WRITE: limitation 1 -->
-- <!-- WRITE: limitation 2 -->
+- Results are limited to what jobs.ch returns for a given search query — very broad queries may not return all listings.
+- Contact information (email, phone) is not available — jobs.ch does not expose this data publicly.
+- Salary data is not provided by jobs.ch listings.
+- Language skills and categories are returned as codes/paths, not human-readable labels.
+- The actor requires a search keyword — browsing all listings without a query is not supported.
 
 ---
 
