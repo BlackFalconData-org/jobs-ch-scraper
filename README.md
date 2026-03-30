@@ -2,7 +2,7 @@
 
 Extract structured data from [jobs.ch](https://jobs.ch) — jobs.ch — Switzerland's leading job board. Full job descriptions, direct apply URLs, and workload percentage filters.
 
-**[Run on Apify →](https://apify.com/blackfalcondata/jobs-ch-scraper)**
+**[Jobs.ch Scraper on Apify →](https://apify.com/blackfalcondata/jobs-ch-scraper)**
 
 ---
 
